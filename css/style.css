@@ -44,11 +44,27 @@ footer {
 h1 {
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #4B2E83; /* deep purple, reads clearly on white main bg */
+  color: #FFFFFF; /* white for contrast against purple header background */
 }
 
 p {
   line-height: 1.5;
+}
+
+/* Links inside header, nav, and footer need explicit color to meet
+   contrast requirements against the purple/teal backgrounds, since the
+   browser's default link color does not have enough contrast there. */
+header a,
+nav a,
+footer a {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+header a:visited,
+nav a:visited,
+footer a:visited {
+  color: #FFFFFF;
 }
 
 /* Skip link - visually hidden until focused */
@@ -73,6 +89,10 @@ p {
   align-items: center;
   row-gap: 60px;
   background-color: #FFF3B0; /* pale/pastel yellow accent, shows through the gaps */
+}
+
+.grid img {
+  width: 100%;
 }
 
 .flex {
